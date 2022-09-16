@@ -1,0 +1,4 @@
+name: leetcode
+channels:
+  - defaults
+prefix: C:\Users\cjj90\anaconda3\envs\leetcode
