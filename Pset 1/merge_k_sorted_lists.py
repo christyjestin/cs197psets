@@ -7,7 +7,23 @@ class ListNode:
         self.next = next
 
 def merge_k_sorted_lists(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-    return ListNode()
+    head = None
+    tail = None
+    while lists:
+        min_index, _ = min(list(enumerate(lists)), key = lambda x: x[1].val)
+        min_val = lists[min_index].val
+        if lists[min_index].next:
+            lists[min_index] = lists[min_index].next
+        else:
+            lists.pop(min_index)
+        if head == None:
+            head = ListNode(val = min_val)
+            tail = head
+        else:
+            tail.next = ListNode(val = min_val)
+            tail = tail.next
+    return head
+
 
 # recursively construct linked list
 def create_linked_list(lst: List[int]) -> ListNode:
