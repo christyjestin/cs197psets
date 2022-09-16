@@ -9,6 +9,7 @@ class ListNode:
 def merge_k_sorted_lists(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
     head = None
     tail = None
+    lists = list(filter(lambda x: x, lists))
     while lists:
         min_index, _ = min(list(enumerate(lists)), key = lambda x: x[1].val)
         min_val = lists[min_index].val
