@@ -1,3 +1,8 @@
+# Data files
+Pset\ 3/data/
+Pset\ 4/wandb/
+Pset\ 4/MNIST/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
